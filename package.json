@@ -1,6 +1,6 @@
 {
   "name": "@wildpeaks/interpolators",
-  "version": "0.1.0",
+  "version": "1.0.0-rc0",
   "description": "Typescript classes to interpolate between keyframes in the style of VRML interpolators",
   "main": "src/interpolators.ts",
   "typings": "src/interpolators.ts",
