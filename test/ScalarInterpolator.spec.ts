@@ -42,7 +42,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('Length 1', () => {
@@ -52,7 +52,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('Too many keyValue', () => {
@@ -62,7 +62,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('Too few keyValue', () => {
@@ -72,7 +72,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('First key not 0', () => {
@@ -82,7 +82,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('Last key not 1', () => {
@@ -92,7 +92,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('key out of order', () => {
@@ -102,7 +102,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('key out of range', () => {
@@ -112,7 +112,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('Infinite in key', () => {
@@ -122,7 +122,7 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('NaN in key', () => {
@@ -132,15 +132,15 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 	});
 
 	it('Infinite in keyValue', () => {
 		const interp = new ScalarInterpolator([0, 0.25, 0.5, 0.75, 1], [1, 2, Infinity, 4, 5]);
-		expect(interp.getValue()).toBe(1);
+		expect(interp.getValue()).toEqual(1);
 
 		interp.setFraction(0.25);
-		expect(interp.getValue()).toBe(2);
+		expect(interp.getValue()).toEqual(2);
 
 		let throws = false;
 		try {
@@ -148,18 +148,18 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
+		expect(throws).toBe(true, 'No error thrown');
 		expect(interp.getFraction()).toEqual(0.25);
-		expect(interp.getValue()).toBe(2);
+		expect(interp.getValue()).toEqual(2);
 	});
 
 
 	it('NaN in keyValue', () => {
 		const interp = new ScalarInterpolator([0, 0.25, 0.5, 0.75, 1], [1, 2, NaN, 4, 5]);
-		expect(interp.getValue()).toBe(1);
+		expect(interp.getValue()).toEqual(1);
 
 		interp.setFraction(0.25);
-		expect(interp.getValue()).toBe(2);
+		expect(interp.getValue()).toEqual(2);
 
 		let throws = false;
 		try {
@@ -167,8 +167,8 @@ describe('ScalarInterpolator', () => {
 		} catch (e){
 			throws = true;
 		}
-		expect(throws).toBe(true);
-		expect(interp.getFraction()).toBe(0.25);
-		expect(interp.getValue()).toBe(2);
+		expect(throws).toBe(true, 'No error thrown');
+		expect(interp.getFraction()).toEqual(0.25);
+		expect(interp.getValue()).toEqual(2);
 	});
 });
