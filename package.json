@@ -1,0 +1,37 @@
+{
+  "name": "@wildpeaks/interpolators",
+  "version": "1.0.0",
+  "description": "Typescript classes to interpolate between keyframes in the style of VRML interpolators",
+  "main": "src/interpolators.ts",
+  "typings": "src/interpolators.ts",
+  "files": [
+    "tsconfig.json",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "test": "jasmine --helper=helper.typescript.js test/*.spec.ts"
+  },
+  "repository": "https://github.com/wildpeaks/package-interpolators",
+  "keywords": [
+    "wildpeaks",
+    "typescript",
+    "interpolation"
+  ],
+  "author": "Cecile Muller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wildpeaks/package-interpolators/issues"
+  },
+  "homepage": "https://github.com/wildpeaks/package-interpolators#readme",
+  "peerDependencies": {
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/jasmine": "2.5.51",
+    "@types/node": "7.0.29",
+    "jasmine": "2.6.0",
+    "ts-node": "3.0.6",
+    "typescript": "2.3.4"
+  }
+}
