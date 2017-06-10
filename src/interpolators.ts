@@ -12,17 +12,18 @@ abstract class Interpolator<T> {
 	protected _fraction: SFFloat;
 	protected _value: T;
 
+	/**
+	 * @param key Fraction of each keyframe, between 0 (start) and 1 (end).
+	 * @param keyValue Values for each keyframe. There must be as many values as keys.
+	 */
 	constructor(key: MFFloat, keyValue: Array<T>){
 		const lengthKey = key.length;
 		const lengthKeyValue = keyValue.length;
+		if (lengthKey < 2){
+			throw new Error(`Not enough elements`);
+		}
 		if (lengthKey !== lengthKeyValue){
 			throw new Error(`Lengths don't match`);
-		}
-		if (lengthKey < 2){
-			throw new Error(`Not enough key elements`);
-		}
-		if (lengthKeyValue < 2){
-			throw new Error(`Not enough keyValue elements`);
 		}
 		if (key[0] !== 0){
 			throw new Error(`First key is not 0`);
@@ -56,23 +57,29 @@ abstract class Interpolator<T> {
 		this._value = keyValue[0];
 	}
 
-	getLerpParams(targetFraction: SFFloat): [T, T, SFFloat] {
+
+	/**
+	 * Finds where a fraction fits between keyframes.
+	 * It returns ["Value Before", "Value After", "Fraction Between"].
+	 * @param fraction Target keyframe to find or interpolate
+	 */
+	protected getLerpParams(fraction: SFFloat): [T, T, SFFloat] {
 		const _key = this._key;
 		const _keyValue = this._keyValue;
 		const _length = this._length;
 
 		let indexBefore: SFInt32;
 		let indexAfter: SFInt32;
-		if (targetFraction === 0){
+		if (fraction === 0){
 			indexBefore = 0;
 			indexAfter = 1;
 		} else {
 			indexBefore = _length - 2;
 			indexAfter = _length - 1;
-			if (targetFraction < 1){
+			if (fraction < 1){
 				for (let i = 1; i < _length; i++){
 					const currentFraction = _key[i];
-					if (currentFraction >= targetFraction){
+					if (currentFraction >= fraction){
 						indexBefore = i - 1;
 						indexAfter = i;
 						break;
@@ -84,17 +91,27 @@ abstract class Interpolator<T> {
 		const fractionAfter = _key[indexAfter];
 		const valueBefore = _keyValue[indexBefore];
 		const valueAfter = _keyValue[indexAfter];
-		const lerpFraction = (targetFraction - fractionBefore) / (fractionAfter - fractionBefore);
+		const lerpFraction = (fraction - fractionBefore) / (fractionAfter - fractionBefore);
 		return [valueBefore, valueAfter, lerpFraction];
 	}
 
+	/**
+	 * Reads the current fraction
+	 */
 	public getFraction(): SFFloat {
 		return this._fraction;
 	};
+
+	/**
+	 * Reads the current value
+	 */
 	public getValue(): T {
 		return this._value;
 	};
 
+	/**
+	 * Sets a new fraction, and updates value accordingly.
+	 */
 	abstract setFraction(newFraction: SFFloat): void;
 }
 
