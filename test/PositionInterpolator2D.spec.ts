@@ -1,6 +1,6 @@
 import {PositionInterpolator2D} from '../src/interpolators';
 
-describe('PositionInterpolator', () => {
+describe('PositionInterpolator2D', () => {
 	it('Fractions', () => {
 		const interp: PositionInterpolator2D = new PositionInterpolator2D([0, 0.5, 1], [[1, 10], [2, 20], [3, 30]]);
 		expect(interp.getFraction()).toEqual(0);
