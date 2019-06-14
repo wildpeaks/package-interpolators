@@ -22,7 +22,6 @@
 !/test
 !/helper.typescript.js
 !/package.json
-!/package-lock.json
 !/tsconfig.json
 !/wallaby.js
 
