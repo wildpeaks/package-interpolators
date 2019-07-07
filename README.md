@@ -1,7 +1,5 @@
 # Interpolators
 
-[![Build Status](https://travis-ci.org/wildpeaks/package-interpolators.svg?branch=master)](https://travis-ci.org/wildpeaks/package-interpolators)
-
 **Typescript classes to interpolate keyframes** in the style of [VRML interpolators](http://www.web3d.org/documents/specifications/14772/V2.0/part1/nodesRef.html#ScalarInterpolator).
 
 Install using:
