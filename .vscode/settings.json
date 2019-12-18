@@ -1,46 +1,15 @@
 {
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"auto-run-command.rules": [
-		{
-			"condition": "hasFile: wallaby.js",
-			"command": "wallaby.start",
-			"message": "Running wallaby"
-		}
+	"eslint.validate": [
+		"typescript"
 	],
 	"files.exclude": {
 		"LICENSE": true,
 		"*.lnk": true,
-		"*.url": true,
-		"*.zip": true,
-		"*.txt": true,
 		"*.log": true,
-		".DS_Store": true,
+		".npmrc": true,
 		".editorconfig": true,
-		".gitignore": true,
-		".gitattributes": true,
-		".chrome": true,
-		".vscode": true,
-		"logs": true,
-		"node_modules": true,
 		"package-lock.json": true,
-		"www": true
-	},
-	"search.exclude": {
-		"LICENSE": true,
-		"*.lnk": true,
-		"*.url": true,
-		"*.zip": true,
-		"*.txt": true,
-		"*.log": true,
-		".DS_Store": true,
-		".editorconfig": true,
-		".gitignore": true,
-		".gitattributes": true,
-		".chrome": true,
-		".vscode": true,
-		"logs": true,
 		"node_modules": true,
-		"package-lock.json": true,
-		"www": true
+		"*/**/node_modules": false
 	}
 }
