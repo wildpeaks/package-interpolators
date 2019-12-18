@@ -1,3 +1,6 @@
 {
-	"extends": "@wildpeaks/tsconfig-node"
+	"extends": "@wildpeaks/tsconfig-node",
+	"compilerOptions": {
+		"types": ["@types/jasmine"]
+	}
 }
