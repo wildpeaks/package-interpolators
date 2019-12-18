@@ -2,6 +2,9 @@
   "name": "@wildpeaks/interpolators",
   "version": "1.1.0",
   "description": "Typescript classes to interpolate between keyframes in the style of VRML interpolators",
+  "eslintConfig": {
+    "extends": "@wildpeaks/typescript"
+  },
   "main": "src/interpolators.ts",
   "typings": "src/interpolators.ts",
   "files": [
@@ -30,6 +33,8 @@
   "devDependencies": {
     "@types/jasmine": "3.5.0",
     "@types/node": "12.12.21",
+    "@wildpeaks/eslint-config-typescript": "8.0.0-alpha7",
+    "eslint": "6.7.2",
     "jasmine": "3.5.0",
     "ts-node": "8.5.4",
     "typescript": "3.7.3"
