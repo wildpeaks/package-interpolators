@@ -1,5 +1,7 @@
+'use strict';
+
 require('ts-node').register({
-	ignore: false,
+	skipIgnore: true,
 	compilerOptions: {
 		module: 'CommonJS'
 	}
