@@ -32,6 +32,6 @@
     "@types/node": "12.12.21",
     "jasmine": "3.5.0",
     "ts-node": "8.5.4",
-    "typescript": "3.5.3"
+    "typescript": "3.7.3"
   }
 }
