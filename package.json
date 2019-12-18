@@ -11,6 +11,12 @@
     "useTabs": true,
     "bracketSpacing": false
   },
+  "greenkeeper": {
+    "commitMessages": {
+      "dependencyUpdate": "feat: update ${dependency}",
+      "devDependencyUpdate": "chore: update ${dependency}"
+    }
+  },
   "main": "src/interpolators.ts",
   "typings": "src/interpolators.ts",
   "files": [
