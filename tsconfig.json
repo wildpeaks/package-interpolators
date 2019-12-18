@@ -1,20 +1,3 @@
 {
-	"compilerOptions": {
-		"moduleResolution": "node",
-		"newLine": "LF",
-		"alwaysStrict": true,
-		"noEmitOnError": true,
-		"noImplicitAny": true,
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"strictNullChecks": true,
-		"preserveConstEnums": true,
-		"removeComments": true,
-		"sourceMap": true,
-		"module": "commonjs",
-		"target": "es5",
-		"lib": ["dom", "es5", "es2015.core"]
-	}
+	"extends": "@wildpeaks/tsconfig-node"
 }
