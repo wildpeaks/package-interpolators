@@ -1,5 +1,7 @@
 # Interpolators
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wildpeaks/package-interpolators.svg)](https://greenkeeper.io/)
+
 **Typescript classes to interpolate keyframes** in the style of [VRML interpolators](http://www.web3d.org/documents/specifications/14772/V2.0/part1/nodesRef.html#ScalarInterpolator).
 
 Install using:
