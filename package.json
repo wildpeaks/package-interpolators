@@ -1,7 +1,24 @@
 {
   "name": "@wildpeaks/interpolators",
   "version": "1.1.0",
+  "author": "Cecile Muller",
+  "license": "MIT",
   "description": "Typescript classes to interpolate between keyframes in the style of VRML interpolators",
+  "eslintConfig": {
+    "extends": "@wildpeaks/typescript"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": true,
+    "bracketSpacing": false
+  },
+  "greenkeeper": {
+    "commitMessages": {
+      "dependencyUpdate": "feat: update ${dependency}",
+      "devDependencyUpdate": "chore: update ${dependency}"
+    }
+  },
   "main": "src/interpolators.ts",
   "typings": "src/interpolators.ts",
   "files": [
@@ -10,7 +27,7 @@
     "test"
   ],
   "scripts": {
-    "test": "jasmine --helper=helper.typescript.js test/*.spec.ts"
+    "test": "jasmine --helper=register.typescript.js test/*.spec.ts"
   },
   "repository": "https://github.com/wildpeaks/package-interpolators",
   "keywords": [
@@ -18,8 +35,6 @@
     "typescript",
     "interpolation"
   ],
-  "author": "Cecile Muller",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/wildpeaks/package-interpolators/issues"
   },
@@ -28,10 +43,14 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/jasmine": "3.3.13",
-    "@types/node": "12.6.1",
-    "jasmine": "3.4.0",
-    "ts-node": "8.3.0",
-    "typescript": "3.5.3"
+    "@types/jasmine": "3.5.0",
+    "@types/node": "12.12.21",
+    "@wildpeaks/eslint-config-typescript": "8.0.0-alpha8",
+    "@wildpeaks/tsconfig-node": "2.0.0-alpha2",
+    "eslint": "6.7.2",
+    "prettier": "1.19.1",
+    "jasmine": "3.5.0",
+    "ts-node": "8.5.4",
+    "typescript": "3.7.3"
   }
 }

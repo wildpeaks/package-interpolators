@@ -1,7 +1,6 @@
 {
 	"recommendations": [
 		"EditorConfig.editorconfig",
-		"WallabyJs.wallaby-vscode",
-		"gabrielgrinberg.auto-run-command"
+		"WallabyJs.wallaby-vscode"
 	]
 }
