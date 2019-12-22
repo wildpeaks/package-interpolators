@@ -1,9 +1,9 @@
 {
   "name": "@wildpeaks/interpolators",
   "version": "1.2.0",
+  "description": "Typescript classes to interpolate between keyframes in the style of VRML interpolators",
   "author": "Cecile Muller",
   "license": "MIT",
-  "description": "Typescript classes to interpolate between keyframes in the style of VRML interpolators",
   "keywords": [
     "wildpeaks",
     "typescript",
