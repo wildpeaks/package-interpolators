@@ -1,6 +1,6 @@
 {
 	"extends": "@wildpeaks/tsconfig-node",
 	"compilerOptions": {
-		"types": ["@types/jasmine"]
+		"types": ["@types/node", "@types/mocha"]
 	}
 }

@@ -1,9 +1,11 @@
-/* eslint-env node, jasmine */
+/* eslint-env node, mocha */
 /* eslint-disable no-new */
+/* eslint-disable prefer-arrow-callback */
+import {strictEqual, deepStrictEqual} from "assert";
 import {PositionInterpolator2D} from "../src/interpolators";
 
-describe("PositionInterpolator2D", () => {
-	it("Fractions", () => {
+describe("PositionInterpolator2D", function() {
+	it("Fractions", function() {
 		const interp: PositionInterpolator2D = new PositionInterpolator2D(
 			[0, 0.5, 1],
 			[
@@ -12,59 +14,59 @@ describe("PositionInterpolator2D", () => {
 				[3, 30]
 			]
 		);
-		expect(interp.getFraction()).toEqual(0);
-		expect(interp.getValue()).toEqual([1, 10]);
+		strictEqual(interp.getFraction(), 0);
+		deepStrictEqual(interp.getValue(), [1, 10]);
 
 		interp.setFraction(0);
-		expect(interp.getFraction()).toEqual(0);
-		expect(interp.getValue()).toEqual([1, 10]);
+		strictEqual(interp.getFraction(), 0);
+		deepStrictEqual(interp.getValue(), [1, 10]);
 
 		interp.setFraction(0.25);
-		expect(interp.getFraction()).toEqual(0.25);
-		expect(interp.getValue()).toEqual([1.5, 15]);
+		strictEqual(interp.getFraction(), 0.25);
+		deepStrictEqual(interp.getValue(), [1.5, 15]);
 
 		interp.setFraction(0.5);
-		expect(interp.getFraction()).toEqual(0.5);
-		expect(interp.getValue()).toEqual([2, 20]);
+		strictEqual(interp.getFraction(), 0.5);
+		deepStrictEqual(interp.getValue(), [2, 20]);
 
 		interp.setFraction(0.75);
-		expect(interp.getFraction()).toEqual(0.75);
-		expect(interp.getValue()).toEqual([2.5, 25]);
+		strictEqual(interp.getFraction(), 0.75);
+		deepStrictEqual(interp.getValue(), [2.5, 25]);
 
 		interp.setFraction(1);
-		expect(interp.getFraction()).toEqual(1);
-		expect(interp.getValue()).toEqual([3, 30]);
+		strictEqual(interp.getFraction(), 1);
+		deepStrictEqual(interp.getValue(), [3, 30]);
 
 		interp.setFraction(1.5);
-		expect(interp.getFraction()).toEqual(1);
-		expect(interp.getValue()).toEqual([3, 30]);
+		strictEqual(interp.getFraction(), 1);
+		deepStrictEqual(interp.getValue(), [3, 30]);
 
 		interp.setFraction(-1);
-		expect(interp.getFraction()).toEqual(0);
-		expect(interp.getValue()).toEqual([1, 10]);
+		strictEqual(interp.getFraction(), 0);
+		deepStrictEqual(interp.getValue(), [1, 10]);
 	});
 
-	it("Length 0", () => {
+	it("Length 0", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D([], []);
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Length 1", () => {
+	it("Length 1", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D([0], [[1, 10]]);
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Too many keyValue", () => {
+	it("Too many keyValue", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D(
@@ -78,10 +80,10 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Too few keyValue", () => {
+	it("Too few keyValue", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D(
@@ -94,10 +96,10 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("First key not 0", () => {
+	it("First key not 0", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D(
@@ -110,10 +112,10 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Last key not 1", () => {
+	it("Last key not 1", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D(
@@ -126,10 +128,10 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("key out of order", () => {
+	it("key out of order", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D(
@@ -144,10 +146,10 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("key out of range", () => {
+	it("key out of range", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D(
@@ -161,10 +163,10 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Infinite in key", () => {
+	it("Infinite in key", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D(
@@ -178,10 +180,10 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("NaN in key", () => {
+	it("NaN in key", function() {
 		let throws = false;
 		try {
 			new PositionInterpolator2D(
@@ -195,10 +197,10 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
+		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Infinite in keyValue", () => {
+	it("Infinite in keyValue", function() {
 		const interp = new PositionInterpolator2D(
 			[0, 0.25, 0.5, 0.75, 1],
 			[
@@ -209,10 +211,10 @@ describe("PositionInterpolator2D", () => {
 				[5, 50]
 			]
 		);
-		expect(interp.getValue()).toEqual([1, 10]);
+		deepStrictEqual(interp.getValue(), [1, 10]);
 
 		interp.setFraction(0.25);
-		expect(interp.getValue()).toEqual([2, 20]);
+		deepStrictEqual(interp.getValue(), [2, 20]);
 
 		let throws = false;
 		try {
@@ -220,12 +222,12 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true, "No error thrown");
-		expect(interp.getFraction()).toEqual(0.25);
-		expect(interp.getValue()).toEqual([2, 20]);
+		strictEqual(throws, true, "No error thrown");
+		strictEqual(interp.getFraction(), 0.25);
+		deepStrictEqual(interp.getValue(), [2, 20]);
 	});
 
-	it("NaN in keyValue", () => {
+	it("NaN in keyValue", function() {
 		const interp = new PositionInterpolator2D(
 			[0, 0.25, 0.5, 0.75, 1],
 			[
@@ -236,10 +238,10 @@ describe("PositionInterpolator2D", () => {
 				[5, 50]
 			]
 		);
-		expect(interp.getValue()).toEqual([1, 10]);
+		deepStrictEqual(interp.getValue(), [1, 10]);
 
 		interp.setFraction(0.25);
-		expect(interp.getValue()).toEqual([2, 20]);
+		deepStrictEqual(interp.getValue(), [2, 20]);
 
 		let throws = false;
 		try {
@@ -247,8 +249,8 @@ describe("PositionInterpolator2D", () => {
 		} catch (e) {
 			throws = true;
 		}
-		expect(throws).toBe(true);
-		expect(interp.getFraction()).toEqual(0.25);
-		expect(interp.getValue()).toEqual([2, 20]);
+		strictEqual(throws, true, "No error thrown");
+		strictEqual(interp.getFraction(), 0.25);
+		deepStrictEqual(interp.getValue(), [2, 20]);
 	});
 });
