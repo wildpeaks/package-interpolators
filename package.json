@@ -43,7 +43,7 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/mocha": "7.0.1",
+    "@types/mocha": "7.0.2",
     "@types/node": "13.7.7",
     "@wildpeaks/eslint-config-typescript": "8.3.0",
     "@wildpeaks/tsconfig-node": "2.3.0",
