@@ -45,7 +45,7 @@
   "devDependencies": {
     "@types/mocha": "7.0.2",
     "@types/node": "13.9.1",
-    "@wildpeaks/eslint-config-typescript": "8.3.0",
+    "@wildpeaks/eslint-config-typescript": "8.4.0",
     "@wildpeaks/tsconfig-node": "2.4.0",
     "eslint": "6.8.0",
     "mocha": "7.1.0",
