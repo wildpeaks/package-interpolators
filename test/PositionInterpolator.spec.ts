@@ -4,8 +4,8 @@
 import {strictEqual, deepStrictEqual} from "assert";
 import {PositionInterpolator} from "../src/interpolators";
 
-describe("PositionInterpolator", function() {
-	it("Fractions", function() {
+describe("PositionInterpolator", function () {
+	it("Fractions", function () {
 		const interp: PositionInterpolator = new PositionInterpolator(
 			[0, 0.5, 1],
 			[
@@ -46,7 +46,7 @@ describe("PositionInterpolator", function() {
 		deepStrictEqual(interp.getValue(), [1, 10, 100]);
 	});
 
-	it("Length 0", function() {
+	it("Length 0", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator([], []);
@@ -56,7 +56,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Length 1", function() {
+	it("Length 1", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator([0], [[1, 10, 100]]);
@@ -66,7 +66,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Too many keyValue", function() {
+	it("Too many keyValue", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator(
@@ -83,7 +83,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Too few keyValue", function() {
+	it("Too few keyValue", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator(
@@ -99,7 +99,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("First key not 0", function() {
+	it("First key not 0", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator(
@@ -115,7 +115,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Last key not 1", function() {
+	it("Last key not 1", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator(
@@ -131,7 +131,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("key out of order", function() {
+	it("key out of order", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator(
@@ -149,7 +149,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("key out of range", function() {
+	it("key out of range", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator(
@@ -166,7 +166,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Infinite in key", function() {
+	it("Infinite in key", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator(
@@ -183,7 +183,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("NaN in key", function() {
+	it("NaN in key", function () {
 		let throws = false;
 		try {
 			new PositionInterpolator(
@@ -200,7 +200,7 @@ describe("PositionInterpolator", function() {
 		strictEqual(throws, true, "No error thrown");
 	});
 
-	it("Infinite in keyValue", function() {
+	it("Infinite in keyValue", function () {
 		const interp = new PositionInterpolator(
 			[0, 0.25, 0.5, 0.75, 1],
 			[
@@ -227,7 +227,7 @@ describe("PositionInterpolator", function() {
 		deepStrictEqual(interp.getValue(), [2, 20, 200]);
 	});
 
-	it("NaN in keyValue", function() {
+	it("NaN in keyValue", function () {
 		const interp = new PositionInterpolator(
 			[0, 0.25, 0.5, 0.75, 1],
 			[

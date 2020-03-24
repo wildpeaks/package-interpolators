@@ -115,6 +115,7 @@ function lerp(fromValue: SFFloat, toValue: SFFloat, fraction: SFFloat): SFFloat 
 	if (isNaN(fromValue) || isNaN(toValue) || !isFinite(toValue)) {
 		throw new Error("Invalid value");
 	}
+	// eslint-disable-next-line no-mixed-operators
 	return fromValue + fraction * (toValue - fromValue);
 }
 
