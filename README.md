@@ -1,6 +1,6 @@
 # Interpolators
 
-
+![Github Release](https://img.shields.io/github/v/release/wildpeaks/package-interpolators.svg?label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=11abfb)
 
 **Typescript classes to interpolate keyframes** in the style of [VRML interpolators](http://www.web3d.org/documents/specifications/14772/V2.0/part1/nodesRef.html#ScalarInterpolator).
 
