@@ -1,4 +1,8 @@
 {
+	"ts-node": {
+		"skipIgnore": true,
+		"transpileOnly": true
+	},
 	"extends": "@wildpeaks/tsconfig-node",
 	"compilerOptions": {
 		"types": ["@types/node", "@types/mocha"]
