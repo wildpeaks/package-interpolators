@@ -32,7 +32,7 @@
     "test"
   ],
   "scripts": {
-    "test": "mocha -r register.typescript.js test/*.spec.ts"
+    "test": "mocha -r ts-node/register/transpile-only test/*.spec.ts"
   },
   "peerDependencies": {
     "typescript": "*"
