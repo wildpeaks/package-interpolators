@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/mocha": "7.0.2",
     "@wildpeaks/eslint-config-typescript": "10.3.0",
-    "@wildpeaks/tsconfig-node": "2.6.3",
+    "@wildpeaks/tsconfig-node": "2.7.0",
     "eslint": "7.1.0",
     "minimist": "1.2.5",
     "mocha": "7.2.0",
