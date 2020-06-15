@@ -27,9 +27,7 @@
   "main": "src/interpolators.ts",
   "types": "src/interpolators.ts",
   "files": [
-    "tsconfig.json",
-    "src",
-    "test"
+    "src"
   ],
   "scripts": {
     "test": "mocha -r ts-node/register/transpile-only test/*.test.ts"
