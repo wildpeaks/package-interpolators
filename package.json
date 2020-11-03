@@ -41,7 +41,7 @@
     "@wildpeaks/tsconfig-node": "2.10.4",
     "eslint": "7.12.1",
     "minimist": "1.2.5",
-    "mocha": "8.2.0",
+    "mocha": "8.2.1",
     "prettier": "2.1.2",
     "ts-node": "9.0.0",
     "typescript": "4.0.5"
