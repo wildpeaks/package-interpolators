@@ -39,7 +39,7 @@
     "@types/mocha": "8.2.0",
     "@wildpeaks/eslint-config-typescript": "10.7.0",
     "@wildpeaks/tsconfig-node": "2.11.1",
-    "eslint": "7.15.0",
+    "eslint": "7.16.0",
     "minimist": "1.2.5",
     "mocha": "8.2.1",
     "prettier": "2.2.1",
