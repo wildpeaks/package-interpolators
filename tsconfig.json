@@ -1,10 +1,10 @@
 {
 	"ts-node": {
 		"skipIgnore": true,
-		"transpileOnly": true
+		"transpileOnly": true,
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
 	},
-	"extends": "@wildpeaks/tsconfig-node",
-	"compilerOptions": {
-		"types": ["@types/node", "@types/mocha"]
-	}
+	"extends": "@wildpeaks/tsconfig"
 }
