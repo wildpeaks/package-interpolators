@@ -1,13 +1,9 @@
 {
 	"mochaExplorer.require": "ts-node/register",
 	"mochaExplorer.files": "test/**/*.test.ts",
-	"eslint.validate": [
-		"typescript"
-	],
+	"eslint.validate": ["typescript"],
 	"files.exclude": {
 		"LICENSE": true,
-		"*.lnk": true,
-		"*.log": true,
 		".editorconfig": true,
 		"package-lock.json": true,
 		"node_modules": true
