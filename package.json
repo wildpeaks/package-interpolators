@@ -40,7 +40,6 @@
     "@wildpeaks/eslint-config-typescript": "11.0.0-rc2",
     "@wildpeaks/tsconfig": "4.0.0-rc2",
     "eslint": "7.18.0",
-    "minimist": "1.2.5",
     "mocha": "8.2.1",
     "ts-node": "9.1.1",
     "typescript": "4.1.3"
