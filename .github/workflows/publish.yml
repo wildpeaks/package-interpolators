@@ -21,9 +21,6 @@ jobs:
       with:
         node-version: 14.x
 
-    - name: Install dependencies
-      run: npm install --prefer-offline --no-fund --no-progress
-
     - name: Initialize deployment
       id: deployment
       uses: actions/github-script@v3.1
@@ -46,9 +43,6 @@ jobs:
         echo Version ${{ github.event.inputs.version }}
         echo NPM Tag ${{ steps.deployment.outputs.tag }}
         echo Deployment ${{ steps.deployment.outputs.id }}
-
-    - name: Test
-      run: npm run test
 
     - name: Package
       run: |
