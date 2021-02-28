@@ -9,7 +9,6 @@
 !/.gitattributes
 !/.gitignore
 !/.github
-!/.prettierignore
 !/.vscode
 !/src
 !/test
