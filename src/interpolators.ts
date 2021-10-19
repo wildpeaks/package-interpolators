@@ -108,7 +108,7 @@ abstract class Interpolator<T> {
 	/**
 	 * Sets a new fraction, and updates value accordingly.
 	 */
-	abstract setFraction(newFraction: SFFloat): void;
+	public abstract setFraction(newFraction: SFFloat): void;
 }
 
 function lerp(fromValue: SFFloat, toValue: SFFloat, fraction: SFFloat): SFFloat {
