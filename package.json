@@ -32,7 +32,7 @@
     "@wildpeaks/eslint-config-typescript": "15.3.0",
     "@wildpeaks/prettier-config": "15.3.0",
     "@wildpeaks/tsconfig": "4.0.0",
-    "eslint": "8.11.0",
+    "eslint": "8.12.0",
     "mocha": "9.2.2",
     "ts-node": "10.7.0",
     "typescript": "4.6.3"
