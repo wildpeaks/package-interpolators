@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@types/mocha": "9.1.1",
-    "@types/node": "18.6.1",
+    "@types/node": "18.6.2",
     "@wildpeaks/eslint-config-typescript": "15.5.0",
     "@wildpeaks/prettier-config": "15.5.0",
     "@wildpeaks/tsconfig": "4.0.0",
