@@ -27,7 +27,7 @@
     "test": "mocha -r ts-node/register test/*.test.ts"
   },
   "devDependencies": {
-    "@types/mocha": "9.1.1",
+    "@types/mocha": "10.0.0",
     "@types/node": "18.7.6",
     "@wildpeaks/eslint-config-typescript": "15.6.0",
     "@wildpeaks/prettier-config": "15.6.0",
